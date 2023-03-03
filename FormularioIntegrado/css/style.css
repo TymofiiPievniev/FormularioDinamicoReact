@@ -1,0 +1,247 @@
+body {
+  background: linear-gradient(gray, black);
+  font-family: "Roboto", sans-serif;
+  font-size: large;
+}
+/* CABECERA */
+.cabecera {
+  background: linear-gradient(white, gray);
+  border-bottom: 2px solid black;
+  padding: 1%;
+  margin-bottom: 1%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#logo {
+  text-align: right;
+}
+#logo img {
+  width: 300px;
+}
+
+/* MENU */
+nav {
+  background: rgb(32, 32, 32);
+  border-radius: 10px;
+  box-shadow: 7px 7px 10px black;
+  text-align: center;
+  padding: 1%;
+  margin: 1%;
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+nav ul li a:hover {
+  color: red;
+  text-decoration: underline;
+  text-shadow: 0 0 5px rgb(83, 82, 82);
+}
+
+/* CONTENIDO */
+.grid-main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 1%;
+  margin: 1%;
+}
+.grid-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1%;
+}
+section {
+  background: linear-gradient(white, gray);
+  box-shadow: 7px 7px 10px black;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 0 5% 4% 5%;
+  margin-bottom: 1%;
+  text-align: justify;
+}
+video {
+  width: 70%;
+  border-radius: 10px;
+  border: 3px solid gray;
+  box-shadow: 10px 10px 20px black;
+  transition-duration: 0.5s;
+}
+video:hover {
+  transform: scale(1.1);
+  box-shadow: 10px 10px 20px gray;
+}
+#video_competi {
+  text-align: right;
+}
+#skate {
+  text-align: justify;
+}
+.galeria {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 3%;
+}
+#skate img {
+  width: 100%;
+  border-radius: 10px;
+  border: 3px solid gray;
+  box-shadow: 10px 10px 20px black;
+  transition-duration: 0.5s;
+}
+#skate img:hover {
+  transform: scale(1.1);
+  box-shadow: none;
+}
+
+/* ASIDE */
+aside {
+  background: linear-gradient(white, gray);
+  box-shadow: 7px 7px 10px black;
+  border: 2px solid black;
+  border-radius: 10px;
+  text-align: justify;
+  padding: 10%;
+  margin-bottom: 2.5%;
+}
+#contacto-aside {
+  width: 100%;
+}
+#contacto-aside input,
+textarea {
+  padding: 2% 0 2% 2%;
+}
+#redes-aside {
+  text-align: left;
+}
+#redes-aside img {
+  width: 70%;
+}
+
+/* FOOTER */
+footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: white;
+  margin: 0 5% 0 5%;
+}
+
+/* formulario de contacto */
+.contacto {
+  width: 70%;
+}
+.contacto input,
+textarea {
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 1%;
+}
+#enviar {
+  width: 103%;
+  background: linear-gradient(red, rgb(42, 3, 3));
+  color: white;
+  transition-duration: 0.2s;
+}
+#enviar:hover {
+  background: linear-gradient(rgb(206, 40, 40), rgb(72, 28, 28));
+  box-shadow: 0 0 10px rgb(64, 16, 16);
+  color: black;
+}
+
+/* redes sociales */
+.redes {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.redes img {
+  width: 30%;
+  transition-duration: 0.5s;
+}
+.redes img:hover {
+  transform: scale(1.7);
+}
+.redes ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  list-style: none;
+}
+#copyright {
+  color: rgba(255, 255, 255, 0.5);
+}
+#subir {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  transition-duration: 0.5s;
+}
+#subir:hover {
+  transform: scale(1.2);
+}
+
+/* MEDIA QUERIES */
+/* TABLET */
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: medium;
+  }
+  #logo img {
+    width: 200px;
+  }
+  .video-center {
+    text-align: center;
+  }
+  #video_competi {
+    text-align: center;
+  }
+  .grid-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1%;
+  }
+  .galeria {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  #skate img {
+    width: 100%;
+  }
+  #skate {
+    padding-bottom: 10%;
+  }
+  #text {
+    color: transparent;
+  }
+}
+
+/* MOVIL */
+@media screen and (max-width: 768px) {
+  .grid-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1%;
+    margin: 1%;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    color: white;
+    margin: 0 5% 0 5%;
+  }
+  .contacto {
+    width: 100%;
+  }
+}
